@@ -1,0 +1,11 @@
+{
+  "name": "Polymer Check",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.3"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}
