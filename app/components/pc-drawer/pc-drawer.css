@@ -111,7 +111,7 @@ paper-icon-button {
     padding-left: 15em; }
   .left-locked .left-show-btn, .right-locked .right-show-btn {
     display: none; }
-  .left-locked .pd-toolbar-header {
+  .left-locked .pc-toolbar-header {
     padding-left: 1em; }
   .pin-btn {
     position: absolute;

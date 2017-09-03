@@ -1,11 +1,23 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
 <link rel="import" href="../pc-drawer/pc-drawer.html"/>
 
 <dom-module id="pc-dashboard">
 	<template>
 
-		<div>main dashboard</div>
 		<pc-drawer>
-			<div class="logo">This Is Logo</div>
+			<div class="logo">Logo </div>
+
+            <div class="left-menu p-t-1">
+                <pc-list-item position="left" icon="home" url="#!">Home</pc-list-item>
+            </div>
+
+            <div class="right-menu">
+                Right Menu 
+            </div>
+
+            <div id="main">
+                Main stuff 
+            </div>
 		</pc-drawer>
 
 	</template>

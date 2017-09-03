@@ -5,10 +5,10 @@ paper-checkbox.paper-checkbox-0 #checkbox.checked.paper-checkbox {
   background-color: #3F51B5;
   color: #f7f7f7; }
 
-pd-list-menu li a:hover, code, table > tr:hover {
+pc-list-menu li a:hover, code, table > tr:hover {
   background-color: #ececec; }
 
-pd-list-menu li ul {
+pc-list-menu li ul {
   background-color: #ececec; }
 
 paper-checkbox.paper-checkbox-0 #checkbox.checked.paper-checkbox {
@@ -17,7 +17,7 @@ paper-checkbox.paper-checkbox-0 #checkbox.checked.paper-checkbox {
 paper-checkbox.paper-checkbox-0 #ink[checked].paper-checkbox {
   color: #3F51B5; }
 
-.pd-drawer-list iron-icon, .main {
+.pc-drawer-list iron-icon, .main {
   color: #757575; }
 
 a {
