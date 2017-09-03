@@ -5,7 +5,7 @@
 	spacing helpers
 	p,m = padding,margin
 	a,t,r,b,l,v,h = all,top,right,bottom,left,vertical,horizontal
-	s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
+	s,m,l,xl,n = small(5px),medium(10px),large(15px),xtra-large(20px),none(0px)
 	This scss will create an example of the following:
 	.pts, .pas, .pvs {
   		padding-top: 5px !important; }
@@ -17,7 +17,7 @@
 $paddingMargins: p, m;
 $positions: t, r, b, l;
 $padding-increment: 5px;
-$sizes: s, m, l, n;
+$sizes: s, m, l, xl, n;
 $pm: padding;
 $pos: top;
 $sz: 0;
@@ -51,8 +51,10 @@ $hvpos: v;
 			} @else if $size == "m" {
 				$sz: $padding-increment * 2;
 			} @else if $size == "l" {
+				$sz: $padding-increment * 3;
+			} @else if $size == "xl" {
 				$sz: $padding-increment * 4;
-			} @else if $size == "n" {
+			}@else if $size == "n" {
 				$sz: $padding-increment * 0;
 			}
 			.#{$tempVar3}, .#{$tempVar}a#{$size}, .#{$paddingMargin}#{$hvpos}#{$size} {

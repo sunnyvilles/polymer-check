@@ -1,24 +1,17 @@
 <dom-module id="pc-drawer">
 
-	<link rel="import" type="css" href="./pc-drawer.css"/>
+	<link rel="import" type="css" href="../../components/pc-drawer/pc-drawer.css"/>
 
 	<template>
 		
-		<div class="drawer" class$={{mainClasses}}>
-			<div class="paper-toolbar">
-				
-				<div class="scrim" on-click="closeDrawer"></div>
+	<div id="drawer" class$="{{mainClasses}}">
+            <div class="c-p paper-toolbar p-l-05 p-r-05 shadow-bottom">
+                <div class="scrim" on-click="closeDrawers"></div>
+                <div class="pd-toolbar-header p-l-05 f-left"><content select=".logo"></content></div>
 
-				<paper-icon-button class="left-show-btn" icon="menu" title="menu" on-click=""></paper-icon-button>
+            </div>
 
-				<div class="pc-toolbar-header"> 
-					<content select=".logo"></content>
-				</div>
-
-				<paper-icon-button class="right-show-btn" icon="more-vert" title="more-vert"></paper-icon-button>
-
-			</div>
-		</div> <!--drawer end-->
+        </div><!--drawer end-->
 	</template>
 
 </dom-module>
@@ -26,7 +19,11 @@
 <script>
 
 	Polymer({
-		is="pc-drawer"
+		is:"pc-drawer",
+		properties:{
+
+		}
+
 	})
 
 </script>
