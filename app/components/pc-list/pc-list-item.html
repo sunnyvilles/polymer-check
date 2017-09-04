@@ -1,0 +1,42 @@
+<dom-module id="pc-list-item">
+	<style></style>
+	<template>	
+		<div class$="{{position}}">
+			<a title="{{name}}" href$="{{url}}">
+				<content></content>
+				<iron-icon icon="{{icon}}" name="{{icon}}"></iron-icon>
+			</a>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is:'pc-list-item',
+		properties:{
+			position:{
+				type:String,
+				value:"",
+				reflectToAttribute:true,
+				notify:true
+			},
+			icon:{
+				type:String,
+				value:"",
+				reflectToAttribute:true,
+				notify:true				
+			},
+			url:{
+				type:String,
+				value:"",
+				reflectToAttribute:true,
+				notify:true	
+			}
+		},
+		ready:function(){
+
+		}
+
+	})
+
+</script>
