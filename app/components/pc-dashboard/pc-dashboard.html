@@ -3,14 +3,19 @@
 
 <link rel="import" href="../pc-list/pc-list-item.html"/>
 <link rel="import" href="../pc-drawer/pc-drawer.html"/>
+<link rel="import" href="../pc-flatiron-director/pc-flatiron-director.html"/>
+
 
 <dom-module id="pc-dashboard">
 	<template>
 		<pc-drawer>
+
 			<div class="logo"> Logo </div>
 
             <div class="left-menu p-t-1">
                 <pc-list-item position="left" icon="home" url="#!">Home</pc-list-item>
+                <pc-list-item position="left" icon="view-module" url="#!/people">People</pc-list-item>
+                <pc-list-item position="left" icon="exit-to-app" url="#!">Logout</pc-list-item>
             </div>
 
             <div class="right-menu">
@@ -20,11 +25,27 @@
             <div id="main">
                 Main stuff 
             </div>
+
 		</pc-drawer>
+        <pc-flatiron-director route="{{route}}"></pc-flatiron-director>
 	</template>
 </dom-module>
 <script>
 	Polymer({
-		is:"pc-dashboard"
+		is:"pc-dashboard",
+        properties:{
+            route:{
+                type:String,
+                notify:true,
+                observer:"routeChanged"
+            }
+        },
+        routeChanged:function(newRoute,prevRoute){
+            var page = newRoute.replace("!","");
+            var params = page.split("?")[1];
+            var pageName = page.split("?")[0];
+            if(pageName == "") pageName = "home";
+
+        }
 	})
 </script>

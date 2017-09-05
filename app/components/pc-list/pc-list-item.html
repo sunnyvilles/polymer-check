@@ -1,5 +1,29 @@
 <dom-module id="pc-list-item">
-	<style></style>
+	<style>
+       a {
+            padding: 0.5em 1em 0.5em 3em;
+            display: inline-block;
+            width: 100%;
+            vertical-align: sub;
+            position: relative;
+            cursor:pointer;
+            box-sizing:border-box;
+        }
+        iron-icon {
+            position: absolute;
+            top: 0.5em;
+        }
+        .left iron-icon{
+            left: 1em;
+        }
+        .right iron-icon{
+            right: 0.5em;
+        }
+        .right a{
+            padding: 0.5em 2.5em 0.5em 1em;
+        }
+
+	</style>
 	<template>	
 		<div class$="{{position}}">
 			<a title="{{name}}" href$="{{url}}">
